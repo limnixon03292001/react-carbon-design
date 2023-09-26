@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Content, Theme } from '@carbon/react';
+import TutorialHeader from './components/TutorialHeader/TutorialHeader';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';      
+import LandingPage from './content/LandingPage/LandingPage';
+import RepoPage from './content/RepoPage/RepoPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+      <Theme theme="g100">
+        <TutorialHeader/>
+      </Theme>
+        <Content>
+          <Routes>
+              <Route exact path="/" element={<LandingPage/>} />
+              <Route path="/repo" element={<RepoPage/>} />
+          </Routes>
+        </Content>
+      </BrowserRouter>
   );
 }
 
