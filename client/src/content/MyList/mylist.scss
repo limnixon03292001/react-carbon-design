@@ -1,0 +1,32 @@
+@use '@carbon/react/scss/type' as *;
+@use '@carbon/react/scss/spacing' as *;
+
+.my_list_title {
+    color: white;
+    @include type-style('productive-heading-06'); 
+    font-weight: 600;
+    margin-bottom: $spacing-06;
+}
+
+.card {
+    color: white;
+    width: 100%;
+    
+    .list-img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px;    
+    }
+
+    .list-title {
+        word-wrap: break-all;
+  
+    }
+}
+
+.grid_my_list {
+    display: grid;
+    // flex-wrap: wrap;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill ,minmax(170px, 1fr));
+}

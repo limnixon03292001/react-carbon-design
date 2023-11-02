@@ -1,0 +1,79 @@
+@use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/type' as *;
+
+.wrapper_login {
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    // overflow: hidden;
+    height: 100vh;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+    position: relative;
+}
+
+.wrapper_login::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 82px;
+    background: linear-gradient(180deg,rgba(0,0,0,.5) 0,transparent);
+}
+
+.login_bg {
+    position: absolute;
+    // min-height: calc(100vh - 48px);
+    width: 100%;
+    // min-height: 100vh; 
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+
+    .bg_img {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+    }
+}
+
+.form {
+    display: block;
+ 
+    // transform: translate(50%);
+    z-index: 999;
+    background-color: rgba(0,0,0,.75);
+    color: white;
+    max-width: 420px;
+    min-height: 220px;
+    width: 100%;
+    margin: 0 auto;
+    padding: $spacing-09;
+    text-align: center;
+
+    h2 {
+        margin-bottom: $spacing-05;
+        @include type-style('productive-heading-05'); 
+        font-weight: 600;
+    }
+
+    .btn_login {
+        outline: none;
+        border: none;
+        appearance: none;
+        background-color: transparent;
+    }
+}
+
+.wrapper_form {
+ 
+    height: calc(100% - 62px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

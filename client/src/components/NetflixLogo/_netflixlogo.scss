@@ -1,0 +1,12 @@
+@use '@carbon/react/scss/spacing' as *;
+
+.svg_nflogo {
+    // align-self: self-start;
+    fill: #e50914;
+    line-height: 90px;
+    width: 160px;
+    position: relative;
+    z-index: 20;
+    margin-left: $spacing-05;
+    margin-top: $spacing-05;
+}

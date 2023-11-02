@@ -1,0 +1,111 @@
+@use '@carbon/react/scss/colors';
+
+// overriding header tooltip bg color
+// because the navigation is dark themed while the content is white
+// which means the dark theme tooltip bg blends into the white content bg
+.cds--header__global .cds--popover-content {
+  background-color: colors.$gray-20;
+}
+
+.cds--header__global .cds--popover-caret {
+  background-color: colors.$gray-20;
+ 
+}
+
+.cds--header__action {
+  padding: 6px;
+}
+
+.avatar_img {
+    position: relative;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid green;
+}
+
+.search_container {
+  position: relative;
+
+  .search_outer_container{
+    max-height: 550px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+  }
+
+  .searched_item_container {
+    display: block;
+    width: 100%;
+    color: white;
+    background-color:#161616;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    transition: all 0.5s ease;
+  }
+
+  .searched_item_container:hover {
+    background-color: #262626;
+  }
+  .searched_img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+
+  .sub_title{
+    color: #b8b5b5;
+    font-size: 13px;
+  }
+}
+
+.search_loading {
+  background-color:#161616;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.logout_container {
+  // border: 1px solid red;
+  position: absolute;
+  width: 100%;
+  max-width: 150px;
+  background-color: #161616;
+  margin-top: 3rem;
+ 
+ 
+
+  button {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 0.9rem;
+    cursor: pointer;
+  }
+ 
+}
+.cds--modal-close__icon {
+  fill: white !important;
+}
+
+.cds--modal-close:hover .cds--modal-close__icon {
+  fill: black !important;
+}
