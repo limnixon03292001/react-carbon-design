@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const NetflixData = require('../models/Netflix_data');
-const MyListData = require('../models/mylist_data');
+const NetflixData = require('../models/ENetflix_data.js');
+const MyListData = require('../models/Mylist_data');
 
 exports.saveTimeStamp = async (req,res) => {
     const { email, movieId, timestamp } = req.body;
