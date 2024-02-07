@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://netflix-carbon.onrender.com",
   "dependencies": {
     "@carbon/react": "1.32.0",
     "@octokit/core": "^5.0.1",
